@@ -1,0 +1,20 @@
+$Moses/scripts/generic/multi-bleu.perl -lc ref.txt < trans.txt
+
+Using this command with the files contents as;
+trans.txt: “The gunman was shot dead by police”
+ref.txt: “The gunman was shot dead by the police”
+
+returns the following;
+BLEU = 72.90, 100.0/83.3/80.0/75.0 (BP=0.867, ratio=0.875, hyp_len=7, ref_len=8)
+
+Using this command with the files contents as (with the space and fullstop);
+trans.txt: “The gunman was shot dead by police .”
+ref.txt: “The gunman was shot dead by the police .”
+
+returns the following;
+BLEU = 67.53, 100.0/85.7/66.7/60.0 (BP=0.882, ratio=0.889, hyp_len=8, ref_len=9)
+
+----
+
+my output;
+BLEU = 68.02, 100.0/85.7/66.7/60.0 (BP=????, ratio=0.889, hyp_len=8, ref_len=9)
